@@ -12,6 +12,7 @@
             <spring.version>4.3.6.RELEASE</spring.version>
             <selenium.version>3.0.1</selenium.version>
             <cucumberjava.version>1.2.5</cucumberjava.version>
+            <appium.version>4.0.0</appium.version>
     </properties>
 
 
@@ -55,6 +56,11 @@
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumberjava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appium.version}</version>
         </dependency>
     </dependencies>
 
