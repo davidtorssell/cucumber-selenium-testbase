@@ -36,6 +36,7 @@ public class BasePageObject {
 
     public void goToUrl(String url) {
         driver.navigate().to(url);
+        log.log(Level.INFO, "Navigated to " + url);
     }
 
 

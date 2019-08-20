@@ -16,7 +16,7 @@ public class GoogleFrontPage extends BasePageObject {
 
     private static final Logger log = Logger.getLogger(GoogleFrontPage.class.getName());
 
-    By searchTextBox = By.id("gs_lc0");
+    By searchTextBox = By.name("q");
 
     public GoogleFrontPage(WebDriver driver) {
         super(driver);

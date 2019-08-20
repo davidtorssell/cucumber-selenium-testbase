@@ -2,6 +2,7 @@ package com.diabol.test.sut;
 
 import com.diabol.test.SharedSeleniumImplementation;
 import com.diabol.test.sut.pageobjects.GoogleFrontPage;
+import com.diabol.test.sut.pageobjects.HandelsbankenFrontPage;
 import com.diabol.test.sut.utils.Urls;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,6 +23,7 @@ public class Sut extends SharedSeleniumImplementation {
     public Urls urls;
 
     public GoogleFrontPage googleFrontPage;
+    public HandelsbankenFrontPage handelsbankenFrontPage;
 
 
 
@@ -36,6 +38,7 @@ public class Sut extends SharedSeleniumImplementation {
         super.createWebDriver();
 
         googleFrontPage = new GoogleFrontPage(getWebDriver());
+        handelsbankenFrontPage = new HandelsbankenFrontPage(getWebDriver());
 
     }
 
