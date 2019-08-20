@@ -10,8 +10,8 @@
 
     <properties>
             <spring.version>4.3.6.RELEASE</spring.version>
-            <selenium.version>3.0.1</selenium.version>
-            <cucumberjava.version>1.2.5</cucumberjava.version>
+            <selenium.version>3.141.59</selenium.version>
+            <cucumberjava.version>4.3.1</cucumberjava.version>
     </properties>
 
 
@@ -41,21 +41,37 @@
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>${cucumberjava.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-spring</artifactId>
-            <version>${cucumberjava.version}</version>
+            <version>4.2.0</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumberjava.version}</version>
+            <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumberjava.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+
     </dependencies>
 
     <build>
