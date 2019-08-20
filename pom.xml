@@ -12,6 +12,7 @@
             <spring.version>4.3.6.RELEASE</spring.version>
             <selenium.version>3.141.59</selenium.version>
             <cucumberjava.version>4.3.1</cucumberjava.version>
+            <maven.test.execution.version>2.22.2</maven.test.execution.version>
     </properties>
 
 
@@ -51,7 +52,7 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-spring</artifactId>
-            <version>4.2.0</version>
+            <version>${cucumberjava.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -84,6 +85,32 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.test.execution.version}</version>
+                <configuration>
+                    <parallel>both</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven.test.execution.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                        <configuration>
+                            <parallel>methods</parallel>
+                            <useUnlimitedThreads>true</useUnlimitedThreads>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

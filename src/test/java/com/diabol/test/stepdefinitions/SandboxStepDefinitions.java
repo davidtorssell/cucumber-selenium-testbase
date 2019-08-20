@@ -1,7 +1,6 @@
 package com.diabol.test.stepdefinitions;
 
 import com.diabol.test.sut.Sut;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -36,6 +35,13 @@ public class SandboxStepDefinitions {
     }
 
 
+    @Then("there should be a picture of italian spiderman")
+    public void there_should_be_a_picture_of_italian_spiderman() {
+    }
+
+    @Then("it should be awesome")
+    public void it_should_be_awesome() {
+    }
 
 
 }
