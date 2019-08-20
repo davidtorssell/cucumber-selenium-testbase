@@ -20,3 +20,4 @@ Usage
 - Execution:
   - Run with jUnit or cucumber runner in ide or
   - mvn test...
+  - Create SUT that extends SharedSeleniumImplementation to reuse driver between scenarios

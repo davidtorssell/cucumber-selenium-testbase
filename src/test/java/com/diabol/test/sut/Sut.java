@@ -1,6 +1,6 @@
 package com.diabol.test.sut;
 
-import com.diabol.test.SharedSeleniumImplementation;
+import com.diabol.test.SeleniumImplementation;
 import com.diabol.test.sut.pageobjects.GoogleFrontPage;
 import com.diabol.test.sut.pageobjects.HandelsbankenFrontPage;
 import com.diabol.test.sut.utils.Urls;
@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * Helper class representing the system under test, rename appropriately to make more intuitive
  */
 @Component
-public class Sut extends SharedSeleniumImplementation {
+public class Sut extends SeleniumImplementation {
 
     private static final Logger log = Logger.getLogger(Sut.class.getName());
 
