@@ -27,8 +27,8 @@ public class HandelsbankenFrontPage extends BasePageObject {
     By pensionSubMenuItem = By.id("LINKprivat/pension");
 
     //By serachOfficeTextBox = By.xpath("//span[@class='shb--screen-reader']");
-    By serachOfficeTextBox = By.xpath("//input[@aria-label='Sök']");
-    By searchButton = By.xpath("//button[@type='submit']");
+    By serachOfficeTextBox = By.xpath("//shb-find-branch-small[@data-module-type='shb-find-branch-small']//input[@aria-label='Sök']");
+    By searchButton = By.xpath("//shb-find-branch-small[@data-module-type='shb-find-branch-small']//button[@type='submit']");
 
 
     public HandelsbankenFrontPage(WebDriver driver) {
