@@ -13,9 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
-import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
+import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 /**
  * Created by davidtorssell on 2017-03-02.
@@ -163,6 +161,15 @@ public class BasePageObject {
         // need to ensure this is agnostic to target system or remove
         //waitForJSDocumentReadyState();
         return text;
+    }
+
+    public void findText(String textToSearchFor) {
+        if(driver.getPageSource().contains(textToSearchFor)) {
+            return;
+        }
+        else {
+            throw new NoSuchElementException("Could not find text on page");
+        }
     }
 
     public void sendKeys(By by, String keys) {

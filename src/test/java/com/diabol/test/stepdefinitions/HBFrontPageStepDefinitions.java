@@ -40,4 +40,15 @@ public class HBFrontPageStepDefinitions {
         sut.handelsbankenFrontPage.verifyHandelsbankenLogotype();
     }
 
+
+    @When("I search for office with {string}")
+    public void i_search_for_office_with(String searchString) {
+        sut.handelsbankenFrontPage.searchForOffice(searchString);
+    }
+
+    @Then("the address to the Sergel office should be displayed")
+    public void the_address_to_the_Sergel_office_should_be_displayed() {
+        sut.handelsbankenFrontPage.findText("Sveavägen 13, 6 tr");
+    }
+
 }

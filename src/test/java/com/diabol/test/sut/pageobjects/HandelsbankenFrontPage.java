@@ -26,6 +26,10 @@ public class HandelsbankenFrontPage extends BasePageObject {
     By sparaSubMenuItem = By.id("LINKprivat/spara");
     By pensionSubMenuItem = By.id("LINKprivat/pension");
 
+    //By serachOfficeTextBox = By.xpath("//span[@class='shb--screen-reader']");
+    By serachOfficeTextBox = By.xpath("//input[@aria-label='Sök']");
+    By searchButton = By.xpath("//button[@type='submit']");
+
 
     public HandelsbankenFrontPage(WebDriver driver) {
         super(driver);
@@ -59,7 +63,6 @@ public class HandelsbankenFrontPage extends BasePageObject {
         }
     }
 
-
     public void verifyUrlForMenuItem(String menuItem) {
         String url = driver.getCurrentUrl();
         String pageUrl = null;
@@ -79,5 +82,10 @@ public class HandelsbankenFrontPage extends BasePageObject {
             default:
                 assertThat("Ended up on some bogus page", url.contains(pageUrl));
         }
+    }
+
+    public void searchForOffice(String searchString) {
+        sendKeys(serachOfficeTextBox, searchString);
+        click(searchButton);
     }
 }
