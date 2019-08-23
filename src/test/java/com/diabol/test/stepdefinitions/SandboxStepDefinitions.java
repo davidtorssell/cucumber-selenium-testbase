@@ -31,7 +31,7 @@ public class SandboxStepDefinitions {
 
     @Then("^there should be a hit with the address to Davids profile$")
     public void there_should_be_a_hit_with_the_address_to_Davids_profile() {
-        sut.googleFrontPage.verifyUrlInSearchHits("https://se.linkedin.com/in/davidtorssell");
+        sut.googleFrontPage.verifyLinkInSearchHits("https://se.linkedin.com/in/davidtorssell");
     }
 
 

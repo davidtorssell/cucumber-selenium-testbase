@@ -164,12 +164,19 @@ public class BasePageObject {
     }
 
     public void findText(String textToSearchFor) {
-        if(driver.getPageSource().contains(textToSearchFor)) {
-            return;
+        for (int i = 0; i < 10; i++) {
+            if (driver.getPageSource().contains(textToSearchFor)) {
+                return;
+            } else {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
-        else {
-            throw new NoSuchElementException("Could not find text on page");
-        }
+        throw new NoSuchElementException("Could not find text on page");
+
     }
 
     public void sendKeys(By by, String keys) {

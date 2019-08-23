@@ -26,8 +26,8 @@ public class GoogleFrontPage extends BasePageObject {
         sendKeys(searchTextBox, searchString + Keys.ENTER);
     }
 
-    public void verifyUrlInSearchHits(String expextedUrl) {
-        WebElement hit = findElement(By.xpath("//cite[text()='" + expextedUrl + "']"));
+    public void verifyLinkInSearchHits(String expextedUrl) {
+        WebElement hit = findElement(By.xpath("//a[@href='" + expextedUrl + "']"));
         assertThat("Did not find expected url: " + expextedUrl, hit != null);
     }
 }
